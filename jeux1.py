@@ -58,8 +58,8 @@ def jouer_manche(deck_joueur, deck_ordinateur, numero_manche, nom_joueur):
     if gagnant == "bataille":
         print("Il y a bataille !")
 
-        # Vérifier qu'il y a assez de cartes pour la bataille
-        if len(deck_joueur) < 1 or len(deck_ordinateur) < 1:
+        # Vérifier qu'il y a assez de cartes pour la bataille (1 face cachée + 1 face visible)
+        if len(deck_joueur) < 2 or len(deck_ordinateur) < 2:
             print("Un joueur n'a plus assez de cartes pour continuer la bataille !")
             return None, butin
 
